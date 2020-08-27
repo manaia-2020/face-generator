@@ -1,8 +1,17 @@
+body {
+  font-family: 'Indie Flower', cursive;
+  text-align: center;
+}
+
+h1 {
+  font-size: 4em;
+}
+
 .container {
   width: 200px;
   height: 200px;
   position: fixed;
-  top: 20%;
+  top: 40%;
   left: 50%;
   margin-top: -100px;
   margin-left: -100px;
@@ -12,3 +21,4 @@
 .faces {
   text-align: center;
 }
+
