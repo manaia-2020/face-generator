@@ -2,11 +2,9 @@ import React from 'react'
 
 import Faces from './Faces'
 
-const App = props => {
-    const {width, height} = props
-
+const App = () => {
     return (
-        <div width={width/2} height={height/2} className='container'>
+        <div className='container'>
             <Faces />
         </div>
     )
