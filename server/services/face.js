@@ -2,7 +2,7 @@ const fs = require('fs')
 
 const randomFile = require('../helpers/random')
 
-const parts = ['ForeHeads', 'Eyes', 'Noses', 'Mouths', 'Chins']
+const parts = ['ForeHeads', 'Eyes', 'Noses', 'Mouths']
 
 function getPart(part) {
   return new Promise((resolve, reject) => {
