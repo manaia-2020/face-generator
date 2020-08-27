@@ -1,6 +1,9 @@
 body {
-  font-family: 'Indie Flower', cursive;
+  font-family:"Lucida Console", Courier, monospace;
   text-align: center;
+  background-image: url('/background/pinkslog.gif');
+  background-size: unset;
+  background-color: rgba(142, 222, 233, 0.986);
 }
 
 h1 {
@@ -15,7 +18,7 @@ h1 {
   left: 50%;
   margin-top: -100px;
   margin-left: -100px;
-  background: red;
+  background: rgba(142, 222, 233, 0.527);
 }
 
 .faces {
