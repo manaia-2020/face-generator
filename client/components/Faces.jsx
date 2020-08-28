@@ -8,38 +8,46 @@ class Faces extends React.Component {
         }
     }
 
-    componentDidMount() {
-        setInterval(() => {
-            fetch("/face")
-            .then((response) => response.json())
-            .then((face) =>
+    fetchFace = () => {
+        fetch("/face")
+          .then((response) => response.json())
+          .then((face) =>
             this.setState({
-                face: {
-                    foreHead: face.ForeHeads,
-                    eye: face.Eyes,
-                    nose: face.Noses,
-                    mouth: face.Mouths
-                }
+              face: {
+                foreHead: face.ForeHeads,
+                eye: face.Eyes,
+                nose: face.Noses,
+                mouth: face.Mouths
+              }
             })
-            )
+          )
+      }
+
+    componentDidMount() {
+        this.fetchFace()
+        setInterval(() => {
+            this.fetchFace()
         }, 5000)
     }
 
     render() {
+        const { foreHead, eye, nose, mouth } = this.state.face
+
+        if(!Object.keys(this.state.face).length) return null
+        
         return (
             <>
                 <div id='fh' className='faces'>
-                    {/* Forehead */}
-                    <p>Hello World</p>
+                    <img src={`/images/ForeHeads/${foreHead}`} alt="foreHead"/>
                 </div>
                 <div id='eyes' className='faces'>
-                    {/* Eyes */}
+                    <img src={`/images/Eyes/${eye}`} alt=""/>
                 </div>
                 <div id='nose' className='faces'>
-                    {/* Nose */}
+                    <img src={`/images/Noses/${nose}`} alt=""/>
                 </div>
                 <div id='bottom' className='faces'>
-                    {/* Mouth/Chin */}
+                    <img src={`/images/Mouths/${mouth}`} alt=""/>
                 </div>
             </>
         )
