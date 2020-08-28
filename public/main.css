@@ -1,5 +1,13 @@
 body {
-  font-family:"Lucida Console", Courier, monospace;
+  border-width: thick;
+  border-color: rgba(221, 151, 228, 0.493);
+  border-style: double;
+  font-family:"Lucida Console", Courier, monospace,;
+  text-decoration: line underline;
+  text-decoration: line-through;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: rgba(221, 151, 228, 0.493);
+  color: rgba(168, 243, 28, 0.493);
   text-align: center;
   background-image: url('/background/pinkslog.gif');
   background-size: unset;
@@ -11,6 +19,7 @@ h1 {
 }
 
 .container {
+  border-style: double;
   width: 200px;
   height: 200px;
   position: fixed;
