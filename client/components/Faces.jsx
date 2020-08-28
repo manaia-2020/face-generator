@@ -49,6 +49,7 @@ class Faces extends React.Component {
                 <div id='bottom' className='faces'>
                     <img src={`/images/Mouths/${mouth}`} alt=""/>
                 </div>
+                <a href="/images/out.png" download>Download Image</a>
             </>
         )
     }

@@ -25,7 +25,8 @@
   "author": "EDA",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "merge-img": "^2.1.3"
   },
   "devDependencies": {
     "@babel/core": "^7.11.4",
