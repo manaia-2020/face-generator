@@ -19,12 +19,14 @@ h1 {
 }
 
 .container {
+  border-width: thick;
+  align-content: center;
   border-style: double;
-  width: 200px;
-  height: 200px;
+  width: 400px;
+  height: 400px;
   position: fixed;
-  top: 40%;
-  left: 50%;
+  top: 45%;
+  left: 45%;
   margin-top: -100px;
   margin-left: -100px;
   background: rgba(142, 222, 233, 0.527);
