@@ -3,7 +3,26 @@ import React from 'react'
 class Faces extends React.Component {
     constructor(props) {
         super(props)
-        
+        this.state = {
+            face: {}
+        }
+    }
+
+    componentDidMount() {
+        setInterval(() => {
+            fetch("/face")
+            .then((response) => response.json())
+            .then((face) =>
+            this.setState({
+                face: {
+                    foreHead: face.ForeHeads,
+                    eye: face.Eyes,
+                    nose: face.Noses,
+                    mouth: face.Mouths
+                }
+            })
+            )
+        }, 5000)
     }
 
     render() {
